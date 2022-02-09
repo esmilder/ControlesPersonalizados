@@ -75,5 +75,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ControlesPersonalizados.Clases\ControlesPersonalizados.Clases.csproj">
+      <Project>{d5ca4ca8-8808-4716-8f4e-4b1d0e64a1b5}</Project>
+      <Name>ControlesPersonalizados.Clases</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
