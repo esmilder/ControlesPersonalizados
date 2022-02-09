@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using System.Threading;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.ComponentModel;
+using System.Windows.Forms;
 
 namespace LogisticDesk.UI.Componentes
 {
@@ -19,7 +20,7 @@ namespace LogisticDesk.UI.Componentes
         private bool previousReadOnly;
         private bool isPasswordMasked = false;
         private bool Enable = true;
-        private Timer AnimationTimer;
+        private System.Windows.Forms.Timer AnimationTimer;
         private bool Focus;
         private float SizeAnimation;
         private float SizeInc_Dec;
@@ -33,7 +34,7 @@ namespace LogisticDesk.UI.Componentes
 
         public CeLearningMaterialTextbox()
         {
-            Timer timer1 = new Timer
+            System.Windows.Forms.Timer timer1 = new System.Windows.Forms.Timer
             {
                 Interval = 1
             };
@@ -77,7 +78,7 @@ namespace LogisticDesk.UI.Componentes
             this.AnimationTimer.Start();
         }
 
-        private void AnimationTick(object sender, EventArgs e)
+        private void AnimationTick(object? sender, EventArgs e)
         {
             if (this.Focus)
             {
@@ -114,7 +115,7 @@ namespace LogisticDesk.UI.Componentes
             this.textbox.SelectionLength = 0;
         }
 
-        protected void OnKeyDown(object sender, KeyEventArgs e)
+        protected void OnKeyDown(object? sender, KeyEventArgs e)
         {
             if (e.Control && (e.KeyCode == Keys.A))
             {

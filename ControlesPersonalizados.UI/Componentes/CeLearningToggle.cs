@@ -22,7 +22,7 @@ namespace LogisticDesk.UI.Componentes
         private string OffTex = "";
         private Color OnCol;
         private Color OffCol;
-        private Timer painTicker = new Timer();
+        private System.Windows.Forms.Timer painTicker = new System.Windows.Forms.Timer();
         public event SliderChangedEventHandler SliderValueChanged;
 
         public CeLearningToggle()
